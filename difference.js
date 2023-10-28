@@ -87,47 +87,54 @@ const bodycolor = localStorage.getItem("background-color")
             const MM2 = localStorage.getItem("MM" + j);
             const YYYY2 = localStorage.getItem("YYYY" + j);
     
-            let Outy, Outm, Outd;
+            let Outy, Outm, Outd, greater;
     
             if (YYYY1 < YYYY2) {
                 Outy = YYYY2 - YYYY1
                 Outm = MM2 - MM1
                 Outd = DD2 - DD1
+                greater="name2"
             }
             else if (YYYY1 == YYYY2) {
                 if (MM1 < MM2) {
                     Outy = YYYY2 - YYYY1
                     Outm = MM2 - MM1
                     Outd = DD2 - DD1
+                    greater="name2"
                 }
                 else if (MM1 == MM2) {
                     if (DD1 < DD2) {
                         Outy = YYYY2 - YYYY1
                         Outm = MM2 - MM1
                         Outd = DD2 - DD1
+                        greater="name2"
                     }
                     else if (DD1 == DD2) {
                         //age is Same
                         Outy = YYYY2 - YYYY1
                         Outm = MM2 - MM1
                         Outd = DD2 - DD1
+                        greater="same"
                     }
                     else {
                         Outy = YYYY1 - YYYY2
                         Outm = MM1 - MM2
                         Outd = DD1 - DD2
+                        greater="name1"
                     }
                 }
                 else {
                     Outy = YYYY1 - YYYY2
                     Outm = MM1 - MM2
                     Outd = DD1 - DD2
+                    greater="name1"
                 }
             }
             else {
                 Outy = YYYY1 - YYYY2
                 Outm = MM1 - MM2
                 Outd = DD1 - DD2
+                greater="name1"
             }
     
     
@@ -150,7 +157,16 @@ const bodycolor = localStorage.getItem("background-color")
                 Outy = "0" + Outy;
             }
     
-    
+
+            if(greater == "name2"){
+            document.querySelector("#greate").innerHTML = `${name1} is Older Than ${name2}`
+            }
+            else if(greater == "name1"){
+               document.querySelector("#greate").innerHTML = `${name2} is Older Than ${name1}`  
+            }
+            else{
+                document.querySelector("#greate").innerHTML = `The Age Of ${name2} And ${name1} Is Same`
+            }
     
             o_d_p.innerHTML = `The Difference In Age Of ${name1} And ${name2} Is`
             document.querySelector("#outy").value = Outy
