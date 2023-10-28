@@ -172,30 +172,4 @@ const bodycolor = localStorage.getItem("background-color")
     //     // Now you can work with displayblock based on the selectedOptionValue
     // });
     
-    const person1 = document.querySelector("#person1");
-    const person2 = document.querySelector("#person2");
     
-    person1.addEventListener("change", () => {
-        handleSelectChange(person1, person2);
-    });
-    
-    person2.addEventListener("change", () => {
-        handleSelectChange(person2, person1);
-    });
-    
-    function handleSelectChange(selectedSelect, otherSelect) {
-        const selectedOption = selectedSelect.options[selectedSelect.selectedIndex];
-    
-        if (selectedOption.value !== "select") {
-            const correspondingOption = otherSelect.querySelector(`option[value="${selectedOption.value}"]`);
-            if (correspondingOption) {
-                correspondingOption.style.display = "none";
-            }
-        }
-    
-        if (selectedSelect.value === "select") {
-            otherSelect.querySelectorAll("option").forEach(option => {
-                option.style.display = "block";
-            });
-        }
-    }    
