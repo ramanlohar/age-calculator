@@ -97,22 +97,19 @@ function isColorDark(color) {
     return brightness < 128; // You can adjust this threshold for what you consider "dark"
 }
 
-//document.querySelector('.fa-bars').addEventListener('click', function() {
-  //  var animatedDiv = document.querySelector(".sidebar");
-   // animatedDiv.classList.remove('hidden');
-   // animatedDiv.style.animationName = 'fadeIn';
-   // animatedDiv.style.animationFillMode = 'forwards';
-  //  animatedDiv.style.animationIterationCount = 1;
-  //  animatedDiv.style.animationDuration = '0.9s';
-  //  animatedDiv.style.animationTimingFunction = 'ease';
-  //  animatedDiv.style.animationDirection = 'normal';
- // });
-
 document.querySelector('.fa-bars').addEventListener('click', function() {
     var animatedDiv = document.querySelector(".sidebar");
     animatedDiv.classList.remove('hidden');
-});
-  
+    animatedDiv.style.animationName = 'fadeIn';
+    animatedDiv.style.animationFillMode = 'forwards';
+    animatedDiv.style.animationIterationCount = 1;
+    animatedDiv.style.animationDuration = '0.9s';
+    animatedDiv.style.animationTimingFunction = 'ease';
+   animatedDiv.style.animationDirection = 'normal';
+  });
+
+
+
  function fadeOut() {
     // alert()
     var animatedDiv = document.querySelector(".sidebar");
