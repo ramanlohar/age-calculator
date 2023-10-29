@@ -63,3 +63,20 @@ hr {
     padding: 5px;
     margin-top: 5px;
 }
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.sidebar {
+    animation-name: slideInFromLeft;
+    animation-duration: 0.9s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
