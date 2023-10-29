@@ -17,12 +17,10 @@
 @keyframes fadeIn {
     0% {
       opacity: 1;
-        left:-200px;
     }
   
     100% {
       opacity: 1;
-        left:200px;
     }
   }
   
