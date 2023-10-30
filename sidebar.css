@@ -61,3 +61,8 @@ hr {
     padding: 5px;
     margin-top: 5px;
 }
+.DNVapp{
+    text-decoration:none;
+    background-color:rgb(7, 245, 7);
+    border-radius:10px;
+}
